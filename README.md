@@ -12,8 +12,6 @@ Is developed with <a href="https://docsify.js.org/#/">Docsify</a> and his plug-i
 * <b>left side</b>: side navigation bar with toggle hamburger button 
 * <b>bottom</b>: navigate between pages
 
-This Doc is not intended for smartphones and tablets.
-
 ---
 
 <h1>jUnit</h1>

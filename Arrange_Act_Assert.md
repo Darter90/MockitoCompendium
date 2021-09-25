@@ -13,7 +13,7 @@ Here, you have to explain what is intended to happen at the end of the test
 
 This 3-phase pattern does not have a precise name, but can be summarized as “the 3 A's of software testing”. The 3 phases are called Arrange -> Act -> Assert.
 
-Surely the Arrange and Act phase influence each other and require more or less time than the Assert phase. 
+Surely the Arrange and Act phase influence each others and requires more or less time than the Assert phase. 
 
 ---
 
@@ -21,7 +21,7 @@ Surely the Arrange and Act phase influence each other and require more or less t
 
 <h4>Maven dependencies</h4>
 
-These are the minimum required dependencies for making test by yourself and make experiments with Mockito + jUnit5 frameworks:
+These are the Minimum Required dependencies for making test by yourself and make experiments with Mockito + jUnit5 Frameworks:
 
 ````
 <dependencies>
@@ -81,7 +81,7 @@ public class SoftwareToTest {
 <h4>Arrange</h4>
 
 On every IDE there's an option to select and generate the test case file.
-Check your IDE instruction for that, but remember to select jUnit5 and put it in the <b>test folder</b> of the project. Maven project generates automatically the required folder usually.
+Check your IDE instruction for that, but remember to select jUnit5 and put it in your <b>test folder</b>. Maven generates automatically the required folder usually.
 
 These are the minimum required import for the test file:
 ````
@@ -110,7 +110,6 @@ class SoftwareToTestTest {
     }
 
   // other stuffs...
-
 
 }
 ````
@@ -153,9 +152,9 @@ Let's start with sum():
 ````
 
 Every test case is followed by a <b>@Test</b> Annotation from jUnit5.
-In theory, if the test pass it means that the method has worked as intended. In more complex cases, you have to use the debugger to see each step of the code execution; now is unnecessary since the simplicity of this code.
+In theory, if the test pass, it means that the method has worked as intended. In more complex cases, you have to use the debugger to see each step of the code execution and track all the lines of code; in our example is unnecessary since the simplicity of this code.
 
-In any case, you have to Assert our result
+In any case, you have to Assert the result
 
 ---
 
@@ -172,7 +171,7 @@ assertEquals((a + b), softwareToTest.sum(a, b));
 }
 ````
 
-That's all... this is an example of how an Unit Test must be writen and intended
+That's all... this is an example of how Unit Tests must be written and intended.
 
 ---
 
