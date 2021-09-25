@@ -1,4 +1,4 @@
-<h1>POJO-like Explicit Constructor</h1>
+<h1>Explicit Constructor</h1>
 
 Let's take with this example:
 
