@@ -1,6 +1,6 @@
 - [Home](README.md)
 - [What is Unit Testing](What_is_Unit_Testing.md)
 - [Arrange -> Act -> Assert](Arrange_Act_Assert.md)
-- Code examples
-  - [POJO-like Objects](/codeExamples/POJO_like_Objects.md)
-  - [test_D](/codeExamples/test_D.md)
+- POJO-like
+  - [Explicit Constructor](/POJO_like/Explicit_Constructor.md)
+  - [Getters And Setters](/POJO_like/Getters_and_Setters.md)
