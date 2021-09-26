@@ -1,8 +1,6 @@
 
 ![logo](media/MojitoCocktail_1.svg)
 
-# Mockito Compendium
-
 > Collection of suggestions for improving unit tests 
 
 - jUnit >= 5.4.2 
