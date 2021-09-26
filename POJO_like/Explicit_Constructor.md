@@ -110,7 +110,7 @@ Current Best Practice suggest to create a method for unit testing the constructo
 
 Usually this is not a good practice in software development, since 
 <i>you must not repeat yourself</i>...but in Unit Test you need to setting up every test as an entity completely separated from the rest of the code.
-And you must have many fields for Unit Test if you want to play with the code and test particular situationss.
+And you must have many fields for Unit Test if you want to play with the code and test particular situations.
 
 
 Let's start by arranging the Unit Test:

@@ -5,3 +5,6 @@
   - [Explicit Constructor](/POJO_like/Explicit_Constructor.md)
   - [Getters And Setters](/POJO_like/Getters_and_Setters.md)
   - [Nested Method](/POJO_like/Nested_Method.md)
+- Private fields and Static methods
+  - [Private fields](/Private_Static/Private_fields.md)
+  - [Static methods](/Private_Static/Static_methods.md)
