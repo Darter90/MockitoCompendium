@@ -10,7 +10,7 @@ Mockito allows to <b>create mock objects of classes and interfaces</b>, which th
 
 Mockito has many ways to work with mocks and you can find all of them on <a href="https://www.baeldung.com/tag/mockito/"> Baeldung</a> or the <a href="https://javadoc.io/doc/org.mockito/mockito-core/latest/org/mockito/Mockito.html">Mockito Documentation</a>
 
-But let's start with an example
+But let's start with an example.
 
 ---
 
@@ -35,14 +35,14 @@ private Map<String, ConfigurationInstructions> configurationList;
 }
 ```
 
-This class has a problem for your Unit Test: it requires a <i>config</i> object to work. Since you are creating a Unit Test, you cannot implemenet and work on all the new object and imange if it is an Interface...
+This class has a problem for your Unit Test: it requires a <i>config</i> object to work. Since you are creating a Unit Test, you cannot implement and work on a new object and @Override all the methods; Same thing if we talk about an Interface...
 
 What do you do? Do you start implementing a new class? 
-If your answer is <b>No</b> you're correct, since this is the wrong way to work on this test.
+If your answer is <b>No</b> you're correct, since this is the wrong way to work on this kind of test.
 
-To resolve this problem, you have to <i>mock</i> that ConfigurationInstructions class by using the <b>@Mock</b> annotation; this is the main @Annotation that works out-of-the-box with the Best Practice syntax that I showed you in <a href="http://localhost:3000/#/Arrange_Act_Assert">Arrange -> Act -> Assert</a>
+To solve the problem, you have to <i>mock</i> that ConfigurationInstructions class by using the <b>@Mock</b> annotation; this is the main @Annotation that works out-of-the-box with the Best Practice syntax that I showed you in <a href="http://localhost:3000/#/Arrange_Act_Assert">Arrange -> Act -> Assert</a>
 
-By mocking that class, you will be able to pass it to the method of the class under test and then stub the value of getId() method.
+By mocking that class, you will be able to pass it to the method of the class under test, and then stub the value of getId() method.
 
 First, arrange the test:
 
@@ -76,21 +76,21 @@ class ConfigurationOfSomething {
 }
 ```
 
-And here we are: you mocked the ConfigurationInstructions class, or interface, by creating a mock object that will be activated in runtime.
+And here we are: you mocked the ConfigurationInstructions class, or Interface, by creating a mock object that will be activated in runtime.
 
 ---
 
 <h4>when()/thenReturn()/verify()</h4>
 
-But before assing config to the software under test, we have to mock even the method into the if statement: <b>config.getId()</b>.
-Since Mockito do not know how to deal with methods of mocked objects, you must specify what they need to return when they are called into the code. This can be achieved by using the <b>when()/thenReturn()</b> syntax of Mockito framework:
+But before assing the config object to the software under test, we have to <b>stub</b> the method into the if statement: <b>config.getId()</b>.
+<u>Since Mockito do not know how to deal with methods of mocked objects, YOU MUST specify what they need to return when they are called into the code.</u> This can be achieved by using the <b>when()/thenReturn()</b> syntax of Mockito framework:
 
 ```
 String Id = "A535";
 when(config.getId()).thenReturn(Id);
 ```
 
-At the end of the code you can assert if the method has been called correctly for just one time, by using the <b>verify()</b> method of Mockito framework. This method is a sort of Assertion, so it as the same importance of the classic Assertions of jUnit:
+At the end of the code you can assert if the method has been called correctly for just one time, by using the <b>verify()</b> method of Mockito framework. This method is a sort of Assertion, so it as the same importance of the standard Assertions of jUnit:
 
 ```
 verify(config, times(1)).getId(Id);
