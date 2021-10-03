@@ -2,15 +2,15 @@
 
 <h1>Welcome</h1>
 
-This is a compendium for Java Developer and Unit Testers that have to deal with Mockito and jUnit in their projects. <br /> It is not intended as a user guide step-by-step, but as a reference for <i>how the things must be done</i>.
+This is a compendium for Java Developer and Unit Testers that have to work with Mockito and jUnit in their projects. It is not intended as a step-by-step guide, but as a reference for skilled developers and tester, looking for a pathway on <i>how the things must be done</i>.
 
 
-Is developed with <a href="https://docsify.js.org/#/">Docsify</a> and his plug-ins ecosystem without any in-depth knowledge:
+This documentation is developed with <a href="https://docsify.js.org/#/">Docsify</a> and his plugins ecosystem:
 
 
-* <b>moon/sun button</b>: switch between light and dark visualization mode
-* <b>left side</b>: side navigation bar with toggle hamburger button 
-* <b>bottom</b>: navigate between pages
+* <b>moon/sun button</b>: switch between light and dark mode;
+* <b>left side</b>: side navigation bar with toggle hamburger button;
+* <b>bottom</b>: navigate between pages, credits.
 
 ---
 
@@ -18,25 +18,23 @@ Is developed with <a href="https://docsify.js.org/#/">Docsify</a> and his plug-i
 
 <a href="https://junit.org/junit5/">jUnit</a> is a simple framework to write repeatable tests. It is an instance of the xUnit architecture for unit testing frameworks.
 
-With this framework you can prepare the field for a unit test case and access to the assertion methods
+With this framework you can prepare the field for a Unit Test case in Java and access to the Assertion methods.
 
-You must have jUnit5 in your project to use Mockito.
-Version 5 of jUnit is incompatible with the old jUnit4. <br /> 
-You need, in your project, a plug-in named <a href="https://mvnrepository.com/artifact/org.junit.vintage/junit-vintage-engine">jUnit Vintage Engine</a> to create a compatibility layer with jUnit4.
+You must have jUnit5 installed via Maven or Grandle in your project to use Mockito;
+and Version 5 of jUnit is incompatible with the old jUnit4. <br /> 
+If somebody in your team needs to use jUnit4 for any reason, you must add a plugin named <a href="https://mvnrepository.com/artifact/org.junit.vintage/junit-vintage-engine">jUnit Vintage Engine</a>, with Maven or Grandle. This plugin creates a compatibility layer from jUnit4 to jUnit5, nothing more nothing less.
 
 ---
 
 <h1>Mockito</h1>
 
-<a href="https://site.mockito.org/">Mockito</a> is a mocking framework that tastes really good. It lets you write beautiful tests with a clean & simple API. <br /> Mockito doesn’t give you hangover because the tests are very readable and they produce clean verification errors. 
+<a href="https://site.mockito.org/">Mockito</a> is a mocking framework that tastes really good. It lets you write beautiful tests with a clean & simple API. <br /> Mockito doesn’t give you hangover, because the tests are very readable and they produce clean verification errors. 
 
-With Mockito you create mocks in runtime and mimate objects, methods and their behaviour during code execution.
+With Mockito, you can create <b>mocks</b> in runtime and mimate objects, methods and behaviours during code execution. You need to add this framework via Maven or Grandle after installing jUnit5.
 
 ---
 
-<h1>Documentation</h1>
-
-
+<h1>Other Documentations</h1>
 
 <ul>
 <li>
@@ -54,5 +52,4 @@ Mockito @Annotations</a>
 <a href="https://www.baeldung.com/mockito-series">
 Mockito in general</a>
 </li>
-
 </ul>

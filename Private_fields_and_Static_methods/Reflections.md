@@ -91,7 +91,7 @@ public class PrivateField {
 }
 ```
 
-The idea is the same, but this time we have to use the <i>Method Reflection Object</i> instead of Field; plus, we have to call the method by <i>invoking it</i> and add a new Exceptions: <i>NoSuchMethodException</i> and <i>IllegalAccessException</i>
+The idea is the same, but this time we have to use the <i>Method Reflection Object</i> instead of Field; plus, we have to call the method by <i>invoking it</i> and add a new Exceptions: <i>NoSuchMethodException</i> and <i>IllegalAccessException</i>:
 
 ```
 @Test
@@ -120,4 +120,4 @@ void testingReflections() throws NoSuchFieldException, IllegalAccessException, N
 }
 ```
 
-On <a href="https://www.baeldung.com/java-reflection">Baeldung</a> you can find some hints and ideas for better using Reflections
+On <a href="https://www.baeldung.com/java-reflection">Baeldung</a> you can find some hints and ideas for better using Reflections.

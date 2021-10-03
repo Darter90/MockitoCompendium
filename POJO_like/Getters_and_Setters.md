@@ -1,8 +1,8 @@
 <h1>Getters and Setters</h1>
 
-Unit testing getters and setters is pretty much simple:
+Testing getters and setters is pretty much simple:
 
-let's make an example for the name value:
+Let's make an example for the name value:
 ````
     @Test
     void getName_and_setName() {
@@ -45,8 +45,7 @@ let's make an example for the name value:
     }
 ````
 
-Repeat more or less the same assertions in all the other methods.<br />
-This is the test case right now:
+Repeat more or less the same assertions in all the other methods. This is the test case right now:
 
 ````
 import org.junit.jupiter.api.Test;

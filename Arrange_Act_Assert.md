@@ -1,19 +1,19 @@
 <h1>Arrange -> Act -> Assert</h1>
 
 
-Everytime you have to deal with a unit test, there are three phases to follow in order:
+Everytime you have to work on a Unit Test, there are three operations to follow in order:
 
 1) The first operation consists in <b>creating the test object</b>, together with the other objects and elements of the code such as @Annotations and references to the testing frameworks;
 
 2) The second operation consists in executing the methods of the software under testing with the help of mocks, reflections and other instruments, if necessary, and proceeding step by step until the resolution of the code;
 
 3) The third and last phase is the verification phase, in which the assertions or verification tools offered by the test frameworks are used.
-Here, you have to explain what is intended to happen at the end of the test 
+Here, you have to explain what is intended to happen at the end of the test (it is not always possible, reason why verification assertions exists). 
 
 
-This 3-phase pattern does not have a precise name, but can be summarized as “the 3 A's of software testing”. The 3 phases are called Arrange -> Act -> Assert.
+This 3-phase pattern does not have a precise name, but can be summarized as “the 3 A's of software testing”. The 3 phases are called <b>Arrange</b> -> <b>Act</b> -> <b>Assert</b>.
 
-Surely the Arrange and Act phase influence each others and requires more or less time than the Assert phase. 
+Surely the Arrange and Act phases influence each others and requires more or less time than the Assert phase. 
 
 ---
 
@@ -25,37 +25,37 @@ These are the Minimum Required dependencies for making test by yourself and make
 
 ````
 <dependencies>
+    <dependency>
+        <groupId>org.junit.jupiter</groupId>
+        <artifactId>junit-jupiter</artifactId>
+        <version>5.4.2</version>
+        <scope>test</scope>
+    </dependency>
         <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter</artifactId>
-            <version>5.4.2</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.mockito</groupId>
-            <artifactId>mockito-core</artifactId>
-            <version>3.6.0</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.mockito</groupId>
-            <artifactId>mockito-junit-jupiter</artifactId>
-            <version>3.6.0</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.junit.platform</groupId>
-            <artifactId>junit-platform-runner</artifactId>
-            <version>1.2.0</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.junit.vintage</groupId>
-            <artifactId>junit-vintage-engine</artifactId>
-            <version>5.4.2</version>
-            <scope>test</scope>
-        </dependency>
-    </dependencies>
+        <groupId>org.mockito</groupId>
+        <artifactId>mockito-core</artifactId>
+        <version>3.6.0</version>
+        <scope>test</scope>
+    </dependency>
+    <dependency>
+        <groupId>org.mockito</groupId>
+        <artifactId>mockito-junit-jupiter</artifactId>
+        <version>3.6.0</version>
+        <scope>test</scope>
+    </dependency>
+    <dependency>
+        <groupId>org.junit.platform</groupId>
+        <artifactId>junit-platform-runner</artifactId>
+        <version>1.2.0</version>
+        <scope>test</scope>
+    </dependency>
+    <dependency>
+        <groupId>org.junit.vintage</groupId>
+        <artifactId>junit-vintage-engine</artifactId>
+        <version>5.4.2</version>
+        <scope>test</scope>
+    </dependency>
+</dependencies>
 ````
 ---
 
@@ -117,9 +117,9 @@ class SoftwareToTestTest {
 Explanation:
 
 <ul>
-<li><b>@ExtendWith(MockitoExtension.class)</b>: this Mockito @Annotation is used to indicate that you are using Mockito and write less of the code in the documentation, like the <b>mock()</b> methods;
+<li><b>@ExtendWith(MockitoExtension.class)</b>: this Mockito @Annotation is used to indicate that you are using Mockito code, like the <b>mock()</b> method;
 </li>
-<li><b>@Spy</b>: this Mockito @Annotation is used to track the true object. Usually is used on the class under test instance;
+<li><b>@Spy</b>: this Mockito @Annotation is used to track the true object. Usually is used on the instance of the class under test;
 </li>
 <li><b>@BeforeEach</b>: this jUnit5 @Annotation specify that the following method must be called <i>before each</i> tested method;
 </li>
@@ -142,27 +142,27 @@ Let's start with sum():
 
 ````
 @Test
-    void sum() {
+void sum() {
 
-        int a = 5;
-        int b = 5;
+    int a = 5;
+    int b = 5;
 
-        softwareToTest.sum(a, b);
-    }
+    softwareToTest.sum(a, b);
+}
 ````
 
 Every test case is followed by a <b>@Test</b> Annotation from jUnit5.
 In theory, if the test pass, it means that the method has worked as intended. In more complex cases, you have to use the debugger to see each step of the code execution and track all the lines of code; in our example is unnecessary since the simplicity of this code.
 
-In any case, you have to Assert the result
+In any case, you have to Assert the result.
 
 ---
 
 <h4>Assert</h4>
 
-In Unit Tests you have to <i>assert the final result</i> of the methods that you're testing. Since you cannot return or print results in unit tests, you have to use Assertions methods to check the results.
+In Unit Tests you have to <i>assert the final result</i> of the methods that you're testing. Since you cannot return or print results in Unit Tests to demonstrate that the program is not failing, you have to use Assertion methods to check the results.
 
-For example...in this case, we have to assert that a + b it results to be c. So, we have to compare these value:
+For example...in this case, we have to assert that <i>(a + b) must be the result of sum() method</i>. So, we have to compare the sum() method with the actual sum of these values:
 
 ````
 // code...

@@ -1,14 +1,12 @@
 <h1>Starting Mockito</h1>
 
-In the main page of this Compendium is written that Mockito is used to <i>mock</i> objects and their funcionalities.
-
 Mockito allows to <b>create mock objects of classes and interfaces</b>, which through it is possible to stub return values for methods and verify if they are called during the code execution.
 
 ---
 
 <h4>Where to drink</h4>
 
-Mockito has many ways to work with mocks and you can find all of them on <a href="https://www.baeldung.com/tag/mockito/"> Baeldung</a> or the <a href="https://javadoc.io/doc/org.mockito/mockito-core/latest/org/mockito/Mockito.html">Mockito Documentation</a>
+Mockito has many ways to work with mocks and you can find all of them on <a href="https://www.baeldung.com/tag/mockito/"> Baeldung</a> or the <a href="https://javadoc.io/doc/org.mockito/mockito-core/latest/org/mockito/Mockito.html">Mockito Documentation</a>.
 
 But let's start with an example.
 
@@ -40,7 +38,7 @@ This class has a problem for your Unit Test: it requires a <i>config</i> object 
 What do you do? Do you start implementing a new class? 
 If your answer is <b>No</b> you're correct, since this is the wrong way to work on this kind of test.
 
-To solve the problem, you have to <i>mock</i> that ConfigurationInstructions class by using the <b>@Mock</b> annotation; this is the main @Annotation that works out-of-the-box with the Best Practice syntax that I showed you in <a href="http://localhost:3000/#/Arrange_Act_Assert">Arrange -> Act -> Assert</a>
+To solve the problem, you have to <i>mock</i> that ConfigurationInstructions class by using the <b>@Mock</b> annotation; this is the main @Annotation that works out-of-the-box with the Best Practice syntax that I showed you in <a href="http://localhost:3000/#/Arrange_Act_Assert">Arrange -> Act -> Assert</a>.
 
 By mocking that class, you will be able to pass it to the method of the class under test, and then stub the value of getId() method.
 
@@ -132,4 +130,4 @@ class ConfigurationOfSomething {
     }
 ```
 
-In theory, you have to test even the HashMap<>, but since it is a private field you cannot access to...<a href="https://darter90.github.io/MockitoCompendium/#/Private_fields_and_Static_methods/Reflections">or not?<a>
+In theory, you have to test even the HashMap<>, but since it is a private field you cannot access to it...<a href="https://darter90.github.io/MockitoCompendium/#/Private_fields_and_Static_methods/Reflections">or not?<a>

@@ -1,17 +1,16 @@
 
 <h1>Nested Method</h1>
 
-Into the class constructor we have a nested method: <b>setCode()</b>
-This method is an example of Integration test nested into the class.
+Into the class constructor we have a nested method: <b>setCode()</b>. This method is an example of Integration test nested into the class.
 
-The best approach in this case, is to unit test the method separately to understand is behavior, and then return into the constructor in a second moment.
+The best approach in this case, is to Unit Test the method separately to understaand is behavior and then return into the constructor in a second moment.
 
 Since we have a private property that change into a String, we need
-to access it with a <b>Reflection</b> and use it for
+to access it with a <a href="https://darter90.github.io/MockitoCompendium/#/Private_fields_and_Static_methods/Reflections">Reflection</a> and use it for
 our assertions before it becames a String.
 I'll write about Reflection in the next test case. For now take it as it is.
 
-In this case the situation is not so complicated, but in other kinds of codes you may have to unit test hundreds of lines of code before reach a section with a nested method. In that case, you must be patient and be caution, since every previous line of code is closely related to the nested method under test.
+In this case the situation is not so complicated, but in other kinds of codes you may have to Unit Test hundreds of lines of code before reach a section with a nested method. In that case, you must be patient and be caution, since every previous line of code is closely related to the nested method under test.
 
 In any case, a good idea is to use the debugger of the IDE and track every step of the execution.
 
