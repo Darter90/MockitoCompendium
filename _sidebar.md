@@ -13,4 +13,4 @@
     - [Explicit Constructor](/POJO_like/Explicit_Constructor.md)
     - [Getters And Setters](/POJO_like/Getters_and_Setters.md)
     - [Nested Method](/POJO_like/Nested_Method.md)
-  - 
+  - [doThrows](Use_cases/doThrows)
