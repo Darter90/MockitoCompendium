@@ -39,6 +39,12 @@ These are the Minimum Required dependencies for making test by yourself and make
     </dependency>
     <dependency>
         <groupId>org.mockito</groupId>
+        <artifactId>mockito-inline</artifactId>
+        <version>3.6.0</version>
+        <scope>test</scope>
+        </dependency>
+    <dependency>
+        <groupId>org.mockito</groupId>
         <artifactId>mockito-junit-jupiter</artifactId>
         <version>3.6.0</version>
         <scope>test</scope>

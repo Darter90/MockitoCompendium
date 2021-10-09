@@ -1,12 +1,16 @@
 - [Home](README.md)
 - [What is Unit Testing](What_is_Unit_Testing.md)
 - [Arrange -> Act -> Assert](Arrange_Act_Assert.md)
-- POJO-like
-  - [POJO-like](/POJO_like/POJO_like.md)
-  - [Explicit Constructor](/POJO_like/Explicit_Constructor.md)
-  - [Getters And Setters](/POJO_like/Getters_and_Setters.md)
-  - [Nested Method](/POJO_like/Nested_Method.md)
 - How use Mockito
   - [Starting Mockito](/How_use_Mockito/Starting_Mockito.md)
-- Private fields and Static methods
-  - [Reflections](/Private_fields_and_Static_methods/Reflections.md)
+  - [MockedStatic](/How_use_Mockito/MockedStatic.md)
+  - [@InjectMocks](/How_use_Mockito/@InjectMocks)
+- [Data Structures Assertions](Data_Strutures_Assertions.md)
+- [Reflections](Reflections.md)
+- Use cases
+  - POJO-like
+    - [POJO-like](Use_cases/POJO_like/POJO_like.md)
+    - [Explicit Constructor](/POJO_like/Explicit_Constructor.md)
+    - [Getters And Setters](/POJO_like/Getters_and_Setters.md)
+    - [Nested Method](/POJO_like/Nested_Method.md)
+  - 
