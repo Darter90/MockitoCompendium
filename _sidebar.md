@@ -4,7 +4,7 @@
 - How use Mockito
   - [Starting Mockito](/How_use_Mockito/Starting_Mockito.md)
   - [MockedStatic](/How_use_Mockito/MockedStatic.md)
-  - [@InjectMocks](/How_use_Mockito/@InjectMocks)
+  - [@InjectMocks](/How_use_Mockito/@InjectMocks.md)
 - [Data Structures Assertions](Data_Strutures_Assertions.md)
 - [Reflections](Reflections.md)
 - Use cases
@@ -13,4 +13,4 @@
     - [Explicit Constructor](/POJO_like/Explicit_Constructor.md)
     - [Getters And Setters](/POJO_like/Getters_and_Setters.md)
     - [Nested Method](/POJO_like/Nested_Method.md)
-  - [doThrows](Use_cases/doThrows)
+  - [doThrows](Use_cases/doThrows.md)
